@@ -1,5 +1,6 @@
-
-
+var sound = new Audio("https://freespecialeffects.co.uk/soundfx/bells/church_bells_01.wav");
+sound.loop = true;
+var setAlarmBtn = document.querySelector('#setAlarmBtn');
 // setting current time
 var currentTime = setInterval(function(){
     var time = new Date();
@@ -62,7 +63,7 @@ secondList();
 
 // logic for setting alarm
 
-function serAlarm(){
+function setAlarm(){
     
     var hr = document.getElementById('alarmHours');
     var min = document.getElementById('alarmMinutes');
@@ -105,7 +106,9 @@ function serAlarm(){
         alarmsInList.forEach(element => {
             // we are comparing current time with elements from local storage so if we delete alarm from list it will not ring
             if(element == currentTime){
-                alert("Its time to rock again!");
+                sound.play();
+                stopAlarmBtn.style.display = "flex"; // when alarm start it will show the alarm start button
+                setAlarmBtn.style.display = "none"; // and it will hide set alarm button
             }
         });
         
@@ -218,3 +221,12 @@ digital.addEventListener('click', ()=>{
     analogue.disabled = false;
     digital.disabled = true;
 })
+
+// logic for stop alarm when clicked on stop alarm button
+var stopAlarmBtn = document.querySelector('#stopAlarmBtn');
+stopAlarmBtn.style.display = "none"
+function stopAlarm(){
+    sound.loop = false;
+    setAlarmBtn.style.display = "flex"; //when we click on stop alarm button it will display set alarm button
+    stopAlarmBtn.style.display = "none" //and hide stop alarm button
+}
