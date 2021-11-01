@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="" type="image/x-icon">
+	<meta charset="utf-8">
+	<title>Alarm clock</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/02d2ed6325.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="clock-container">
+        <div id="currentTime">
+            <!-- Digital clock face -->
+            <div class="digitalClock"></div>
+            <!-- analogue clock face-->
+            <div class="analogue-clock">
+                <div class="aHour">
+                    <div class="aHr" id="aHr"></div>
+                </div>
+                <div class="aMinute">
+                    <div class="aMin" id="aMin"></div>
+                </div>
+                <div class="aSecond"> 
+                    <div class="aSec" id="aSec"></div>
+                </div>
+        
+            </div>
+        </div>
+        <!-- buttons for clack face toggling -->
+        <div class="clockFaces">
+            <button id="digitalButton">Digital</button>
+            <button id= "analogueButton">Analogue</button>
+        </div>
+        <!-- alarm setting section -->
+        <div id="setAlarmContainer">
+            <div id="alarmTime">
+
+                <div class="alarmElements">
+                    <div id="hour">
+                        <select id="alarmHours"></select>
+                    </div>
+                    <div id="minutes">
+                        <select id="alarmMinutes"></select>
+                    </div>
+                    <div id="seconds">
+                        <select id="alarmSeconds"></select>
+                    </div>
+                    <div class="ampm">
+                    <select id="ampm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                    </div>
+                </div>
+
+                <button id="setAlarmBtn" onclick="serAlarm()">SET ALARM</button>
+            </div>
+            <h2 style="letter-spacing: 2px; color: rgb(24, 27, 18); margin-top: 10px;">Alarm List</h2>
+            <div id="alarmList"> 
+               
+                <!-- <span> 12:00:00 am </span> &nbsp &nbsp <a class = "delete"><i class="far fa-trash-alt"></i></a> -->
+            </div>
+       
+         </div>
+    </div>
+
+
+ 
+
+
+    <script src="script.js"></script>
+</body>
+</html>
