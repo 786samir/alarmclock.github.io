@@ -109,6 +109,7 @@ function setAlarm(){
                 sound.play();
                 stopAlarmBtn.style.display = "flex"; // when alarm start it will show the alarm start button
                 setAlarmBtn.style.display = "none"; // and it will hide set alarm button
+                editStorage(element); //it will delete alarm  from local storage when it rang once.
             }
         });
         
