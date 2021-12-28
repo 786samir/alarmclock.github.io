@@ -2,7 +2,7 @@ About project-
 This alarm clock is made using HTML, CSS, JavaScript, we can set and delete alarms in this clock.
 
 
-Hosted Link - https://786samir.github.io/alarmclock.github.io/
+Hosted Link - https://samir-sayyed.github.io/alarmclock.github.io/
 
 
 
